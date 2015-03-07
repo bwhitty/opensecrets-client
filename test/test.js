@@ -37,7 +37,7 @@ describe('API client', function () {
         process.env.OPEN_SECRETS_API_KEY = '123';
       });
 
-      var fakeApiKey = '123';
+      var fakeApiKey = '456';
       var client = new OpenSecretsClient(fakeApiKey);
       assert.equal(client.apiKey, fakeApiKey);
     });
