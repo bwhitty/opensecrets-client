@@ -80,10 +80,9 @@ describe('API client', function () {
   });
 
   describe('endpoint', function () {
-    it('getLegislators should not fail', function (done) {
-      // @todo fixme need to inject a valid api key here to make this test work
+    it('basic request should not fail', function (done) {
       var client = new OpenSecretsClient();
-      client.getLegislators({id: 'NY'}).on('complete', function (res) {
+      client.makeRequest('getLegislators', {id: 'NY'}).on('complete', function (res) {
         assert.equal(res instanceof Error, false);
         done();
       });
