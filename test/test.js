@@ -65,7 +65,7 @@ describe('API client', function () {
       var format = 'xml'
         , apiKey = 'fake'
         , client = new OpenSecretsClient(apiKey, format);
-      assert.equal(client._makeUrl(), client.baseURL+'?output='+format+'&apiKey='+apiKey);
+      assert.equal(client._makeUrl(), client.baseURL+'?output='+format+'&apikey='+apiKey);
     });
 
     it('extends default URL with desired parameters', function () {
@@ -74,17 +74,17 @@ describe('API client', function () {
         , client = new OpenSecretsClient(apiKey, format);
       assert.equal(
         client._makeUrl({method: 'candContrib'}),
-        client.baseURL+'?output='+format+'&apiKey='+apiKey+'&method=candContrib'
+        client.baseURL+'?output='+format+'&apikey='+apiKey+'&method=candContrib'
       );
     });
   });
 
   describe('endpoint', function () {
     it('getLegislators should not fail', function (done) {
+      // @todo fixme need to inject a valid api key here to make this test work
       var client = new OpenSecretsClient();
       client.getLegislators({id: 'NY'}).on('complete', function (res) {
-        //console.log(res);
-        assert.equal(! res instanceof Error, true);
+        assert.equal(res instanceof Error, false);
         done();
       });
     });
