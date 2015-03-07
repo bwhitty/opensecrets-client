@@ -1,0 +1,29 @@
+{
+  "name": "opensecrets-client",
+  "version": "1.0.0",
+  "description": "A wrapper for the Opensecrets.org API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bwhitty/opensecrets-client.git"
+  },
+  "keywords": [
+    "api",
+    "client",
+    "opensecrets"
+  ],
+  "author": "Braden Whitten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bwhitty/opensecrets-client/issues"
+  },
+  "homepage": "https://github.com/bwhitty/opensecrets-client",
+  "dependencies": {
+    "restler": "3.2.2",
+    "dotenv": "0.5.1",
+    "extend": "2.0.0"
+  }
+}
