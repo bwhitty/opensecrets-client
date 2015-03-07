@@ -24,7 +24,8 @@
   "dependencies": {
     "restler": "3.2.2",
     "dotenv": "0.5.1",
-    "extend": "2.0.0"
+    "extend": "2.0.0",
+    "qs":"2.3.3"
   },
   "devDependencies": {
     "mocha": "2.2.0",

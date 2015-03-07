@@ -1,6 +1,10 @@
 OpenSecretsClient
 =================
 
+A node.js HTTP client wrapper for the Opensecrets.org API.
+
+Opensecrets.org API documentation: www.opensecrets.org/action/api_doc.php
+
 Installing
 ---------
 
@@ -24,3 +28,13 @@ client.candidateContributors({ /* TODO add example options */, output: 'json'})
    
    });
 ```
+
+Testing
+------
+This library utilizes ```mocha```, and ```assert``` to run tests. Simply run
+
+```
+mocha
+```
+
+in the project directory.
