@@ -39,7 +39,7 @@ Making a request is simple. Just use the ```makeRequest``` method, which returns
 ```javascript
 var OpenSecretsClient = require('open_secrets_client');
 var client = new OpenSecretsClient('your_api_key');
-client.makeRequest('getLegislators'{id: 'NY', output: 'xml'})
+client.makeRequest('getLegislators', {id: 'NY', output: 'xml'})
 .on('complete', function(res) {
   if (res instanceof Error) console.log('Something went wrong');
   
