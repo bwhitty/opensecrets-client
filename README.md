@@ -37,7 +37,7 @@ OPEN_SECRETS_API_KEY=<your-key> node ...
 
 Making a request is simple. Just use the ```makeRequest``` method, which returns a ```restler``` response object, which you can listen to events on. For more information see the [restler event documentation](https://github.com/danwrong/restler/blob/master/README.md#events).
 ```javascript
-var OpenSecretsClient = require('open_secrets_client');
+var OpenSecretsClient = require('opensecrets-client');
 var client = new OpenSecretsClient('your_api_key');
 client.makeRequest('getLegislators', {id: 'NY', output: 'xml'})
 .on('complete', function(res) {
